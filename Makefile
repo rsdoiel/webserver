@@ -17,7 +17,7 @@ VERSION = $(shell grep '"version":' codemeta.json | cut -d\"  -f 4)
 
 BRANCH = $(shell git branch | grep '* ' | cut -d  -f 2)
 
-PACKAGE = $(shell ls -1 *.ts | grep -v 'version.ts')
+PACKAGE = $(shell ls -1 *.js | grep -v 'version.js')
 
 MAN_PAGES_1 = $(shell ls -1 *.1.md | sed -E 's/.1.md/.1/g')
 
@@ -42,7 +42,7 @@ endif
 
 PREFIX = $(HOME)
 
-build: version.ts CITATION.cff about.md bin compile installer.sh installer.ps1
+build: version.js CITATION.cff about.md bin compile installer.sh installer.ps1
 
 bin: .FORCE
 	mkdir -p bin
@@ -53,12 +53,12 @@ compile: .FORCE
 check: .FORCE
 	deno task check
 
-version.ts: codemeta.json
-	deno task version.ts
+version.js: codemeta.json
+	deno task version.js
 
-format: $(shell ls -1 *.ts | grep -v version.ts | grep -v deps.ts)
+format: $(shell ls -1 *.js | grep -v version.js | grep -v deps.js)
 
-$(shell ls -1 *.ts | grep -v version.ts): .FORCE
+$(shell ls -1 *.js | grep -v version.js): .FORCE
 	deno fmt $@
 
 man: $(MAN_PAGES_1) # $(MAN_PAGES_3) $(MAN_PAGES_7)
@@ -92,7 +92,6 @@ htdocs: .FORCE
 
 test: .FORCE
 	deno task test
-	deno task editor_test.ts
 
 install: build
 	@echo "Installing programs in $(PREFIX)/bin"
