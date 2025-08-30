@@ -3,5 +3,6 @@
 *.swp
 *.bak
 bin/
+man/
 dist/
 htdocs/

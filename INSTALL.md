@@ -3,6 +3,7 @@ Installation for development of **webserver**
 
 **webserver** This is the code form my blog post https://rsdoiel.github.io/blog/2025/06/30/Build_a_Static_Web_Server.html
 
+<!--
 Quick install with curl or irm
 ------------------------------
 
@@ -26,6 +27,8 @@ You may get security warnings if you are using macOS or Windows. See the notes f
 
 - [INSTALL_NOTES_macOS.md](INSTALL_NOTES_macOS.md)
 - [INSTALL_NOTES_Windows.md](INSTALL_NOTES_Windows.md)
+
+-->
 
 Installing from source
 ----------------------

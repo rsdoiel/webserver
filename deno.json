@@ -1,7 +1,9 @@
 {
   "tasks": {
     "build": "deno compile --allow-read --allow-net -o bin/webserver webserver.js",
-    "version.js": "cmt codemeta.json version.js"
+    "version.js": "cmt codemeta.json version.js",
+    "CITATION.cff": "cmt codemeta.json CITATION.cff",
+    "about.md": "cmt codemeta.json about.md"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1",
