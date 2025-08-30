@@ -2,7 +2,7 @@
 
 # webserver
 
-This is the code form my blog post https://rsdoiel.github.io/blog/2025/06/30/Build_a_Static_Web_Server.html
+This is the code form my blog post, [Build a Static Web Server](https://rsdoiel.github.io/blog/2025/06/30/Build_a_Static_Web_Server.html)
 
 ## Release Notes
 
